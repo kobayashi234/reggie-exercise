@@ -5,6 +5,21 @@ spring:
       url: jdbc:mysql://localhost:3306/reggie?serverTimezone=UTC
       username: root
       password: root
+  cache:
+    redis:
+      time-to-live: 1800000
+
+  redis:
+    host: 192.168.150.128
+    port: 6379
+    password: root
+    database: 0 #默认操作0号数据库
+    jedis:
+      pool:
+        max-active: 8 #最大连接数
+        max-wait: 1ms #连接池最大阻塞等待时间
+        max-idle: 8 #连接池最大空闲连接
+        min-idle: 0 #连接池最小空闲连接
 
 mybatis-plus:
   configuration:
@@ -13,6 +28,7 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: assign_id
+
 
 reggie:
   path: D:\\reggie\\

@@ -44,7 +44,7 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> impl
         queryWrapper.in(Setmeal::getId, ids);
         queryWrapper.eq(Setmeal::getStatus, 1);
 
-        int count = this.count(queryWrapper);
+        long count = this.count(queryWrapper);
         //如果套餐是在售状态，抛出自定义异常
         if(count > 0){
             throw new CustomException("该套餐正在售卖中，不能删除！");

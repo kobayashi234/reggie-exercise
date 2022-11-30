@@ -29,15 +29,10 @@
         </dependency>
 
         <!--德鲁伊starter-->
-        <!--<dependency>-->
-        <!--    <groupId>com.alibaba</groupId>-->
-        <!--    <artifactId>druid-spring-boot-starter</artifactId>-->
-        <!--    <version>1.2.8</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.2.15</version>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.8</version>
         </dependency>
 
         <dependency>
@@ -57,11 +52,11 @@
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
 
-        <!--MySQL主从复制-->
+        <!--MySQL主从复制,版本不能修改！因为高版本和德鲁伊starter不兼容-->
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
-            <version>4.1.1</version>
+            <version>4.0.0-RC1</version>
         </dependency>
 
         <dependency>
